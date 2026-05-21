@@ -1,4 +1,4 @@
-# 📘 Movie Recommendation System - Complete Project Guide
+# 📘 CineMatch AI - Complete Project Guide
 
 > **Comprehensive technical documentation** for developers, covering installation, configuration, development, deployment, and troubleshooting.
 
@@ -41,7 +41,7 @@
 
 ## 🎯 Overview
 
-This guide provides comprehensive documentation for the Movie Recommendation System, a production-ready Django application that delivers intelligent movie recommendations using advanced machine learning algorithms.
+This guide provides comprehensive documentation for the CineMatch AI, a production-ready Django application that delivers intelligent movie recommendations using advanced machine learning algorithms.
 
 ### What This Guide Covers
 
@@ -151,7 +151,7 @@ Open your browser and navigate to:
 http://localhost:8000
 ```
 
-You should see the Movie Recommendation System home page. ✅
+You should see the CineMatch AI home page. ✅
 
 ---
 

@@ -1,5 +1,5 @@
 """
-Advanced Movie Recommendation System - Inference Engine
+Advanced CineMatch AI - Inference Engine
 Optimized for TMDB Movies Dataset 2023 (930K+ movies)
 """
 
@@ -384,7 +384,7 @@ if __name__ == "__main__":
     recommender = MovieRecommender(model_dir='./models')
     
     print("\n" + "="*100)
-    print("🎬 TMDB Movie Recommendation System - Examples")
+    print("🎬 TMDB CineMatch AI - Examples")
     print("="*100)
     
     # Example 1: Basic recommendations

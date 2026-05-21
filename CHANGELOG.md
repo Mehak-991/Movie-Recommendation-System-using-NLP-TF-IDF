@@ -1,6 +1,6 @@
 # Changelog
 
-> All notable changes to the Movie Recommendation System are documented in this file.
+> All notable changes to the CineMatch AI are documented in this file.
 
 This project follows [Semantic Versioning](https://semver.org/) and the changelog format is based on [Keep a Changelog](https://keepachangelog.com/).
 

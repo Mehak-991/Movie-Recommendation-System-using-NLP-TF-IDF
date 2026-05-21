@@ -1,4 +1,4 @@
-# TMDB Movie Recommendation System (930K+ Movies) - Complete Guide
+# TMDB CineMatch AI (930K+ Movies) - Complete Guide
 
 ## 🎬 Dataset Overview
 

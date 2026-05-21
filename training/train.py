@@ -1,5 +1,5 @@
 """
-Advanced Movie Recommendation System - Training Pipeline
+Advanced CineMatch AI - Training Pipeline
 Optimized for TMDB Movies Dataset 2023 (930K+ movies)
 """
 
@@ -346,7 +346,7 @@ class MovieRecommenderTrainer:
             max_movies: Limit number of movies (None = all)
         """
         print("="*80)
-        print("🎬 TMDB Movie Recommendation System Training")
+        print("🎬 TMDB CineMatch AI Training")
         print("="*80)
         
         # Load data

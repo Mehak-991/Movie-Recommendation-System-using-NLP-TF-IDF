@@ -1,5 +1,5 @@
 """
-URL Configuration for Movie Recommendation System
+URL Configuration for CineMatch AI
 """
 from django.urls import path
 from . import views

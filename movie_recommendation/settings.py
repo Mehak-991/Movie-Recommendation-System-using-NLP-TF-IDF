@@ -1,5 +1,5 @@
 """
-Django settings for Movie Recommendation System
+Django settings for CineMatch AI
 Production-ready configuration with environment-based settings
 """
 import os

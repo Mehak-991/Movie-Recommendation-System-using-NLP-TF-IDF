@@ -1,5 +1,5 @@
 """
-Movie Recommendation System Views
+CineMatch AI Views
 Integrates with advanced TMDB model training system
 """
 import logging
@@ -200,7 +200,7 @@ def _get_recommender():
 @require_http_methods(["GET", "POST"])
 def main(request):
     """
-    Main view for movie recommendation system.
+    Main view for CineMatch AI.
     GET: Display search interface
     POST: Process search and display recommendations
     """
