@@ -32,7 +32,7 @@ Get CineSync running on your local machine in minutes using our pre-built demo m
 
 ### 1. Clone & Enter
 ```bash
-git clone https://github.com/your-username/cinesync.git
+git clone https://github.com/Mehak-991/cinesync.git
 cd cinesync
 ```
 
