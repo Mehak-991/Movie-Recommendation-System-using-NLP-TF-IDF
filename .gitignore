@@ -55,13 +55,18 @@ htmlcov/
 .pytest_cache/
 
 # Deployment & Models
+# Allow trained models to be uploaded
+!models/*.json
+!models/*.parquet
+!models/*.npy
+!models/*.npz
+!training/models/*.json
+!training/models/*.parquet
+!training/models/*.npy
+!training/models/*.npz
+
+# Still ignore other temporary files
 *.pyc
-*.csv
-*.pkl
-*.json
-*.npy
-*.parquet
-*.npz
 *.sqlite3
 debug_out.txt
 check_error.txt

@@ -149,13 +149,26 @@ def _load_model_in_background():
     _MODEL_LOAD_PROGRESS = 0
     _LOAD_ERROR = None
     
-    # Check for model directory (configurable via settings or environment)
-    model_dir = getattr(settings, 'MODEL_DIR', os.environ.get('MODEL_DIR', 'models'))
+    # Priority search for model directory
+    possible_dirs = [
+        os.environ.get('MODEL_DIR'),
+        getattr(settings, 'MODEL_DIR', None),
+        'models',
+        'training/models',
+        'static'
+    ]
     
-    # Fallback to static directory if models directory doesn't exist
-    if not Path(model_dir).exists():
-        model_dir = 'static'
-        logger.warning(f"Model directory not found, using static directory")
+    model_dir = None
+    for d in possible_dirs:
+        if d and Path(d).exists() and (Path(d) / 'movie_metadata.parquet').exists():
+            model_dir = d
+            break
+            
+    if not model_dir:
+        _LOAD_ERROR = "Model files missing! Please ensure .parquet, .npy, and .json files are uploaded to 'models/' or 'training/models/'."
+        logger.error(_LOAD_ERROR)
+        _MODEL_LOADING = False
+        return
     
     try:
         def progress_callback(progress):
