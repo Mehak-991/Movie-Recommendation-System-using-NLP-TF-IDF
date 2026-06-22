@@ -662,15 +662,8 @@
 
     <script>
         $(function() {
-            // Autocomplete configuration
-            var movieNames = [
-                {% for movie in all_movie_names %}
-                "{{ movie|escapejs }}",
-                {% endfor %}
-            ];
-
             $("#movie_name").autocomplete({
-                source: movieNames,
+                source: "/api/search/",
                 minLength: 2,
                 delay: 300,
                 select: function(event, ui) {

@@ -283,19 +283,23 @@ def main(request):
 @require_http_methods(["GET"])
 def search_movies(request):
     """API endpoint for searching movies (autocomplete)"""
-    query = request.GET.get('q', '').strip()
+    query = request.GET.get('q', request.GET.get('term', '')).strip()
     
     if len(query) < 2:
-        return JsonResponse({'movies': [], 'count': 0})
+        return JsonResponse([], safe=False)
     
     try:
         recommender = _get_recommender()
         
         if recommender is None:
-            return JsonResponse({'movies': [], 'count': 0, 'loading': True})
+            return JsonResponse([], safe=False)
         
         matching_movies = recommender.search_movies(query, n=20)
         
+        # If 'term' is present, return a simple list for jQuery UI compatibility
+        if 'term' in request.GET:
+            return JsonResponse(matching_movies, safe=False)
+            
         return JsonResponse({
             'movies': matching_movies,
             'count': len(matching_movies)
